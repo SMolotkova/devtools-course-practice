@@ -17,9 +17,8 @@ TEST(Molotkova_Svetlana_ComplexNumberTesting, Multiply_by_number) {
     ComplexNumber b1(3.0, 0);
     double b2 = 3.0;
     ComplexNumber rres = a*b1;
-    ComplexNumber eres(a.getRe()*b2, a.getIm()*3);
-    bool res = rres == eres;
-    EXPECT_TRUE(res);
+    ComplexNumber eres(a.getRe()*b2, a.getIm()*b2);
+    EXPECT_EQ(rres, eres);
 }
 
 TEST(Molotkova_Svetlana_ComplexNumberTesting, No_Exeption) {
