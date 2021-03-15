@@ -24,8 +24,8 @@ TEST(Molotkova_Svetlana_ComplexNumberTesting, Multiply_by_number) {
 }
 
 TEST(Molotkova_Svetlana_ComplexNumberTesting, Test_Find_Сonjugate) {
-    ComplexNumber a(2.0, -7.0);
-    ComplexNumber a_c(2.0, 7.0);
+    ComplexNumber a(3.0, -4.0);
+    ComplexNumber a_c(3.0, 4.0);
     double mod_a = sqrt((a.getRe() * a.getRe()) + (a.getIm() * a.getIm()));
     double mod_a_c = sqrt((a_c.getRe() * a_c.getRe()) + (a_c.getIm() * a_c.getIm()));
     bool q = mod_a == mod_a_c;
