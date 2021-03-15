@@ -22,7 +22,9 @@ TEST(Molotkova_Svetlana_ComplexNumberTesting, Multiply_by_number) {
 }
 
 TEST(Molotkova_Svetlana_ComplexNumberTesting, No_Exeption) {
-    ComplexNumber a1(2.0, 9.0);
-    ComplexNumber a2(3.0, 3.0);
+    ComplexNumber a1(1.0, 9.0);
+    ComplexNumber a2(7.0, 1.0);
+    ComplexNumber a3(0.32, 1.24);
     ASSERT_NO_THROW(a1 / a2);
+    EXPECT_EQ(a1 / a2, a3);
 }
