@@ -2,7 +2,6 @@
 
 #include <gtest/gtest.h>
 
-#include <tuple>
 #include "include/complex_number.h"
 
 TEST(Molotkova_Svetlana_ComplexNumberTesting, Pow) {
@@ -23,11 +22,8 @@ TEST(Molotkova_Svetlana_ComplexNumberTesting, Multiply_by_number) {
     EXPECT_TRUE(res);
 }
 
-TEST(Molotkova_Svetlana_ComplexNumberTesting, Test_Find_Сonjugate) {
-    ComplexNumber a(3.0, -4.0);
-    ComplexNumber a_c(3.0, 4.0);
-    double mod_a = sqrt((a.getRe() * a.getRe()) + (a.getIm() * a.getIm()));
-    double mod_a_c = sqrt((a_c.getRe() * a_c.getRe()) + (a_c.getIm() * a_c.getIm()));
-    bool q = mod_a == mod_a_c;
-    EXPECT_TRUE(q);
+TEST(Molotkova_Svetlana_ComplexNumberTesting, No_Exeption) {
+    ComplexNumber a1(2.0, 9.0);
+	ComplexNumber a2(3.0, 3.0);
+	ASSERT_NO_THROW(a1 / a2);
 }
