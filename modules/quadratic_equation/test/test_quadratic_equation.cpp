@@ -8,9 +8,10 @@
 #include "include/QuadraticEquation.h"
 
 TEST(Equation, Cant_Solve_Equation) {
-    QuadraticEquation eq(1, 0, -9);
+    QuadraticEquation eq(1, 0, -25);
+    std::pair<double, double> myres(5, -5);
     std::pair<double, double> res = eq.solver();
-    ASSERT_EQ(9, 9);
+    ASSERT_EQ(myres, res);
 }
 
 TEST(Equation, Equation1) {
