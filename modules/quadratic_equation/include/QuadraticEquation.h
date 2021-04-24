@@ -12,7 +12,7 @@ class QuadraticEquation {
     double c;
  public:
     QuadraticEquation(double a, double b, double c) {
-    if (a == 0){
+    if (a == 0) {
          throw "Error";
      } else  if ((b == 0) && (c == 0)) {
         throw "Error";
