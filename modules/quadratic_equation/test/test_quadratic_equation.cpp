@@ -7,11 +7,13 @@
 
 #include "include/QuadraticEquation.h"
 
-TEST(Equation, Cant_Solve_Equation) {
-    QuadraticEquation eq(1, 0, -25);
-    std::pair<double, double> myres(5, -5);
-    std::pair<double, double> res = eq.solver();
-    ASSERT_EQ(myres, res);
+TEST(Equation, Bad_Equation) {
+    ASSERT_ANY_THROW(QuadraticEquation eq(0, 0, 0));
+}
+
+TEST(Equation, Bad_Discr) {
+    QuadraticEquation eq(3, -6, 5);
+    ASSERT_ANY_THROW(eq.solver());
 }
 
 TEST(Equation, Equation1) {
