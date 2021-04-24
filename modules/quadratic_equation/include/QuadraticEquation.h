@@ -12,9 +12,15 @@ class QuadraticEquation {
     double c;
  public:
     QuadraticEquation(double a, double b, double c) {
-    this->a = a;
-    this->b = b;
-    this->c = c;
+    if (a == 0){
+         throw "Error";
+     } else  if ((b == 0) && (c == 0)) {
+        throw "Error";
+     } else {
+       this->a = a;
+       this->b = b;
+       this->c = c;
+     }
   }
     double discr(double a, double b, double c);
 
