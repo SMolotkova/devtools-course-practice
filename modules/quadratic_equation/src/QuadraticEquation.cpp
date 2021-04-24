@@ -12,7 +12,11 @@ double QuadraticEquation::discr(double a, double b, double c) {
 
 std::pair<double, double> QuadraticEquation::solver() {
     double d = discr(a, b, c);
-    double x1 = (-b + sqrt(d)) / (2 * a);
-    double x2 = (-b - sqrt(d)) / (2 * a);
-    return std::make_pair(x1, x2);
+    if (d < 0){
+         throw "Error";
+     } else { 
+        double x1 = (-b + sqrt(d)) / (2 * a);
+        double x2 = (-b - sqrt(d)) / (2 * a);
+        return std::make_pair(x1, x2);
+        }
 }
