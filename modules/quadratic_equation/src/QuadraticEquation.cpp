@@ -6,7 +6,7 @@
 #include "include/QuadraticEquation.h"
 
 QuadraticEquation::QuadraticEquation(double a, double b, double c) {
-    if (a == 0){
+    if (a == 0) {
          throw "Not quadratic equation";
      } else {
        this->a = a;
