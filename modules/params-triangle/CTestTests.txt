@@ -42,5 +42,5 @@ add_test(
 )
 
 set_tests_properties (${prefix}_can_Find_A_P PROPERTIES
-    PASS_REGULAR_EXPRESSION "Perimeter = 12.0, Area = 6.0"
+    PASS_REGULAR_EXPRESSION "Perimeter = 12, Area = 6"
     LABELS "${MODULE}")
