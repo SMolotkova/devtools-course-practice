@@ -65,20 +65,14 @@ std::string TriangleApp::operator()(int argc, const char** argv) {
     }
 
     std::ostringstream stream;
-    try {
-        std::pair <double, double> a(args.x1, args.y1);
-        std::pair <double, double> b(args.x2, args.y2);
-        std::pair <double, double> c(args.x3, args.y3);
-        Triangle triangle(a, b, c);
-        double p = triangle.Perimeter();
-        double s = triangle.Area();
-        stream << "Perimeter = " << p << ", Area = "
-            << s << ".";
-        message_ = stream.str();
-    }
-    catch (std::string& str) {
-        return str;
-    }
-
+    std::pair <double, double> a(args.x1, args.y1);
+    std::pair <double, double> b(args.x2, args.y2);
+    std::pair <double, double> c(args.x3, args.y3);
+    Triangle triangle(a, b, c);
+    double p = triangle.Perimeter();
+    double s = triangle.Area();
+    stream << "Perimeter = " << p << ", Area = "
+        << s << ".";
+    message_ = stream.str();
     return message_;
 }
