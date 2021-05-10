@@ -17,11 +17,11 @@ class TriangleApp {
      std::string message_;
      using Arguments = struct {
          double x1;
-		 double y1;
-		 double x2;
-		 double y2;
-		 double x3;
-		 double y3;
+         double y1;
+         double x2;
+         double y2;
+         double x3;
+         double y3;
      };
 };
 
