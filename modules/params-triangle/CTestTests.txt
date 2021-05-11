@@ -44,3 +44,24 @@ add_test(
 set_tests_properties (${prefix}_can_Find_A_P PROPERTIES
     PASS_REGULAR_EXPRESSION "Perimeter = 12, Area = 6"
     LABELS "${MODULE}")
+
+
+
+
+add_test(
+    NAME ${prefix}_eq_Points
+    COMMAND ${APPLICATION} 0 0 0 0 1 1
+)
+
+set_tests_properties (${prefix}_eq_Points PROPERTIES
+    PASS_REGULAR_EXPRESSION "Points must be different."
+    LABELS "${MODULE}")
+
+add_test(
+    NAME ${prefix}_not_Tr
+    COMMAND ${APPLICATION} 0 0 1 1 2 2
+)
+
+set_tests_properties (${prefix}_not_Tr PROPERTIES
+    PASS_REGULAR_EXPRESSION "It is not a triangle."
+    LABELS "${MODULE}")
