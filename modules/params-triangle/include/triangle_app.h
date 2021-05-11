@@ -4,6 +4,7 @@
 #define MODULES_PARAMS_TRIANGLE_INCLUDE_TRIANGLE_APP_H_
 
 #include <string>
+#include <utility>
 #include "include/triangle.h"
 
 class TriangleApp {
@@ -15,7 +16,8 @@ class TriangleApp {
  private:
      void help(const char* appname, const char* message = "");
      bool validateNumberOfArguments(int argc, const char** argv);
-     bool validateArguments(const char** argv,  std::pair <double, double> a, std::pair <double, double> b, std::pair <double, double> c);
+     bool validateArguments(const char** argv,  std::pair <double, double> a, std::pair <double, double> b, 
+        std::pair <double, double> c);
      bool validateTriangle(const char** argv, double area);
      std::string message_;
      using Arguments = struct {
