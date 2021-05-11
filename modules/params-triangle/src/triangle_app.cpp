@@ -34,8 +34,9 @@ bool TriangleApp::validateNumberOfArguments(int argc, const char** argv) {
     return true;
 }
 
-bool TriangleApp::validateArguments(const char** argv, std::pair <double, double> a, std::pair <double, double> b, std::pair <double, double> c) {
-    if ((a == b) || (a == c) || (b == c)){
+bool TriangleApp::validateArguments(const char** argv, std::pair <double, double> a, std::pair <double,
+    double> b, std::pair <double, double> c) {
+    if ((a == b) || (a == c) || (b == c)) {
         help(argv[0], "Points must be different.\n\n");
         return true;
     }
@@ -84,7 +85,7 @@ std::string TriangleApp::operator()(int argc, const char** argv) {
     std::pair <double, double> c(args.x3, args.y3);
     if (validateArguments(argv, a, b, c)) {
         return message_;
-    } 
+    }
     Triangle triangle(a, b, c);
     double AB = triangle.SideAB();
     double BC = triangle. SideBC();
@@ -95,8 +96,6 @@ std::string TriangleApp::operator()(int argc, const char** argv) {
     if (validateTriangle(argv, s)) {
         return message_;
     }
-    //if(s == 0){
-    //    help(argv[0], "It is not a triangle.\n\n"); 
     stream << "Perimeter = " << p << ", Area = "
         << s << ".";
     message_ = stream.str();
