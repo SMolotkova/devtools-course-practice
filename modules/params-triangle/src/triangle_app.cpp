@@ -34,8 +34,8 @@ bool TriangleApp::validateNumberOfArguments(int argc, const char** argv) {
     return true;
 }
 
-bool TriangleApp::validateArguments(const char** argv, std::pair <double, double> a,
-    std::pair <double, double> b, std::pair <double, double> c) {
+bool TriangleApp::validateArguments(const char** argv, std::pair <double,
+    double> a, std::pair <double, double> b, std::pair <double, double> c) {
     if ((a == b) || (a == c) || (b == c)) {
         help(argv[0], "Points must be different.\n\n");
         return true;
